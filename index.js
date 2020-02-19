@@ -16,9 +16,9 @@ if (yourAge >= 18 && yourAge <= 60) {
 }
 
 // Exercise คำสั่ง alert ไหนที่จะถูกรันบ้าง
-if (-1 || 0) alert( 'first');            // run alert
-if (-1 && 0) alert( 'second');           // not run alert
-if (null || -1 && 1) alert( 'third');    // run alert
+if (-1 || 0) alert( 'first');            // alert runs.
+if (-1 && 0) alert( 'second');           // alert not runs.
+if (null || -1 && 1) alert( 'third');    // alert runs.
 
 // Exercise ให้เขียนระบบ login
 let userName = prompt("Who are you?");
@@ -71,7 +71,7 @@ for (let i =2; i <= 10; i++) {
 let i = 0;
 while (i < 3) {
     alert(`number ${i}!`);
-    ++i
+    i++
 }
 
 // Exercise เพิ่มเติม
@@ -84,7 +84,7 @@ console.log(sum);
 // Exercise เพิ่มเติม
 let sum = 0;
 while (true) {
-    let value = +prompt("ใส่เลข", '');
+    let value = prompt("ใส่เลข", '');
     if (!value) break; // (*)
     sum += value;
 }
@@ -102,15 +102,15 @@ for (let i = 0; i < 3; i++) {
 
 
 // Exercise ให้เขียนเกมส์ทายตัวเลขสำหรับเล่นสองคน
-let numberA = +prompt("input a number");
+let numberA = prompt("input a number");
 while (!(numberA >= 1 && numberA <= 100)) {
     alert("Please input a number between 1 and 100");
-    numberA = +prompt("Input a number between 1 and 100") 
+    numberA = prompt("Input a number between 1 and 100") 
 }
 
 let numberB;
 while (numberA !== numberB) {
-    numberB = +prompt("Guess a number");
+    numberB = prompt("Guess a number");
     if (numberB > numberA) {
     numberB = alert("Too high")
     } else if (numberB < numberA) {
@@ -136,9 +136,9 @@ while (numberA !== numberB) {
   } */
 
 let browser = prompt("Enter your browser")
-if (browser === "Edge") {
+if (browser == "Edge") {
     alert("You've got the Edge!");
-} else if (browser === "Chrome" || browser === "Firefox" || browser === "Safari" || browser === "Opera") {
+} else if (browser == "Chrome" || browser == "Firefox" || browser == "Safari" || browser == "Opera") {
     alert("Okay we support these browser too");
 } else {
     alert("We hope that this page looks ok!");
