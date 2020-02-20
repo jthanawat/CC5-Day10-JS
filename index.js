@@ -15,23 +15,30 @@ if (yourAge >= 18 && yourAge <= 60) {
     alert("Your age is not required")
 }
 
+let yourAge = prompt("Enter your age");
+if (!(yourAge >= 18 && yourAge <= 60)) {
+    alert("Your age is not required");
+} else {
+    alert("Your age is required")
+}
+
 // Exercise คำสั่ง alert ไหนที่จะถูกรันบ้าง
 if (-1 || 0) alert( 'first');            // alert runs.
 if (-1 && 0) alert( 'second');           // alert not runs.
 if (null || -1 && 1) alert( 'third');    // alert runs.
 
 // Exercise ให้เขียนระบบ login
-let userName = prompt("Who are you?");
-if (userName === "Admin") {
-    let password = prompt ("Enter your password")
-        if (password === "codecamp#5") {
-            alert("ยินดีต้อนรับ");
-        } else if (password === "" || password === null) {
-            alert("ยกเลิก");
-        } else {
-            alert("รหัสผ่านผิด");
-        }
-} else if (userName === "" || userName === null) {
+let userName = prompt("คุณเป็นใคร ?");
+if (userName == "Admin") {
+    let password = prompt ("กรุณาใส่รหัสผ่าน")
+    if (password == "codecamp#5") {
+        alert("ยินดีต้อนรับ");
+    } else if (password == "" || password == null) {        // eslf if (!password || password == "")
+        alert("ยกเลิก");
+    } else {
+        alert("รหัสผ่านผิด");
+    }
+} else if (userName == "" || userName == null) {           // else if (!userName || userName == "")
     alert("ยกเลิก");
 } else {
     alert("ฉันไม่รู้จักคุณ");
@@ -118,6 +125,23 @@ while (numberA !== numberB) {
     }
 }
 
+//solution :
+let answer = prompt('Enter you number');
+
+while (true) {
+    let guessNumber = prompt('Guess a number');
+    if (guessNumber == answer) {
+        alert('ถูกต้อง') 
+        break;
+    } else {
+      if (guessNumber < answer) {
+          alert('มากไป') 
+      } else {
+          alert('น้อยไป')
+      }  
+    }
+}
+
 // Exercise แปลง Code ดังกล่าวเป็น if-else statement
 /* switch (browser) {
     case 'Edge':
@@ -172,9 +196,6 @@ switch (a) {
         alert('2,3');
         break;
 }
-
-
-
 
 // เสริมจากใน class
 // for (let i =1; i <= 10; i++) {
