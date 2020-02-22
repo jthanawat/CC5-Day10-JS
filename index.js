@@ -33,7 +33,7 @@ if (userName == "Admin") {
     let password = prompt ("กรุณาใส่รหัสผ่าน")
     if (password == "codecamp#5") {
         alert("ยินดีต้อนรับ");
-    } else if (password == "" || password == null) {        // eslf if (!password || password == "")
+    } else if (password == "" || password == null) {        // else if (!password || password == "")
         alert("ยกเลิก");
     } else {
         alert("รหัสผ่านผิด");
