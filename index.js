@@ -1,4 +1,4 @@
-
+// * Logical operators and If *
 // Exercise คำสั่งต่อไปนี้จะแสดงค่าเป็นอะไร
 alert (null || 2 || undefined);          // 2
 alert (alert(1) || 2 || alert(3));       // แสดงค่่า alert (1)ก่อน แล้วคืนค่าเป็น 2
@@ -7,7 +7,6 @@ alert (alert(1) && alert(2));            // แสดงค่า alert(1)ก่
 alert (null || 2 && 3 || 4);             // 3
 
 // Exercise เขียนคำสั่ง if ที่เช็คอายุว่าอยู่ระหว่าง 18 - 60 และเขียนคำสั่ง if ที่เช็คอายุว่าไม่อยู่ระหว่าง 18 - 60
-
 let yourAge = prompt("Enter your age");
 if (yourAge >= 18 && yourAge <= 60) {
     alert("Your age is required");
@@ -44,6 +43,9 @@ if (userName == "Admin") {
     alert("ฉันไม่รู้จักคุณ");
 }
 
+
+
+// * Loops:while and for *
 // Exercise เลขที่ถูก alert เป็นลำดับสุดท้ายคือเลขอะไร
 // ans. เลขที่ถูก alert ลำดับสุดท้ายคือเลข 1 
 let i = 3;
@@ -54,17 +56,16 @@ while (i) {
 
 // Exercise code ทั้งสองอันนี้จะแสดง alert ออกมาเหมือนกันทั้งหมดหรือไม่
 // ans. ไม่เหมือนกันเนื่องจาก prefix ++ จะเพิ่มค่า1 ก่อนแล้วค่อยนำมาใช้ ส่วน postfix ++ จะนำตัวแปรมาเช็ค condition ก่อนแล้วจึงเพิ่มค่า1 ทีหลัง
-/* let i = 0;
-while (++i < 5) alert( i ); */
+let i = 0;
+while (++i < 5) alert( i ); 
 
-/* let i = 0;
-while (i++ < 5) alert( i ); */
-
+let i = 0;
+while (i++ < 5) alert( i ); 
 
 // Exercise code ทั้งสองอันนี้จะแสดง alert ออกมาเหมือนกันทั้งหมดหรือไม่
 // ans. เหมือนกัน
-// for (let i = 0; i < 5; i++) alert( i );
-// for (let i = 0; i < 5; ++i) alert( i );
+for (let i = 0; i < 5; i++) alert( i );
+for (let i = 0; i < 5; ++i) alert( i );
 
 // Exercise ให้เขียน loop ทั้งแสดงเลข 2 ถึง 10 ออกมา
 for (let i =2; i <= 10; i++) {
@@ -107,7 +108,6 @@ for (let i = 0; i < 3; i++) {
     alert(`number ${i}!`);
 }
 
-
 // Exercise ให้เขียนเกมส์ทายตัวเลขสำหรับเล่นสองคน
 let numberA = prompt("input a number");
 while (!(numberA >= 1 && numberA <= 100)) {
@@ -142,6 +142,9 @@ while (true) {
     }
 }
 
+
+
+// * switch *
 // Exercise แปลง Code ดังกล่าวเป็น if-else statement
 /* switch (browser) {
     case 'Edge':
